@@ -52,6 +52,16 @@
 		__original(0.0);
 	}}.setMinWorldSpeedMult;
 
+	q.onUpdate = @(__original) { function onUpdate()
+	{
+		if (::TimeStone.Interface.hasPendingAutoPause())
+		{
+			::TimeStone.Interface.executeAutoPause();
+		}
+
+		__original();
+	}}.onUpdate;
+
 	q.updateTopBarButtonState = @(__original) { function updateTopBarButtonState()
 	{
 		if (!::MSU.isNull(::World.TopbarDayTimeModule))

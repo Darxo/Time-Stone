@@ -15,6 +15,7 @@
 	m = {
 	// Private
 		LastPauseTriggered = 0,		// time stamp in seconds when one of our events has last paused the game
+		HasPendingAutoPause = false,
 	},
 
 	function triggerEvent( _event )
@@ -38,7 +39,7 @@
 
 				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.DiscoverHostileParty").getValue())
 				{
-					this.triggerAutoPause();
+					this.queueAutoPause();
 				}
 				break;
 			}
@@ -50,7 +51,7 @@
 			{
 				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.DiscoverHostileAttackableLocation").getValue())
 				{
-					this.triggerAutoPause();
+					this.queueAutoPause();
 				}
 				break;
 			}
@@ -63,7 +64,7 @@
 
 				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.DiscoverUniqueLocation").getValue())
 				{
-					this.triggerAutoPause();
+					this.queueAutoPause();
 				}
 				break;
 			}
@@ -71,7 +72,7 @@
 			{
 				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.NightfallAttackableLocation").getValue())
 				{
-					this.triggerAutoPause();
+					this.queueAutoPause();
 				}
 				break;
 			}
@@ -83,14 +84,14 @@
 					{
 						if (nearbyEntity.isAttackable() && ::TimeStone.Mod.ModSettings.getSetting("AutoPause.SunriseAttackableLocation").getValue())
 						{
-							this.triggerAutoPause();
+							this.queueAutoPause();
 						}
 					}
 					else
 					{
 						if (!nearbyEntity.isAlliedWithPlayer() && ::TimeStone.Mod.ModSettings.getSetting("AutoPause.SunriseHostileParty").getValue())
 						{
-							this.triggerAutoPause();
+							this.queueAutoPause();
 						}
 					}
 				}
@@ -104,14 +105,14 @@
 					{
 						if (nearbyEntity.isAttackable() && ::TimeStone.Mod.ModSettings.getSetting("AutoPause.NightfallAttackableLocation").getValue())
 						{
-							this.triggerAutoPause();
+							this.queueAutoPause();
 						}
 					}
 					else
 					{
 						if (!nearbyEntity.isAlliedWithPlayer() && ::TimeStone.Mod.ModSettings.getSetting("AutoPause.NightfallHostileParty").getValue())
 						{
-							this.triggerAutoPause();
+							this.queueAutoPause();
 						}
 					}
 				}
@@ -124,9 +125,25 @@
 		}
 	}
 
-	// Pause the game on the world map and initiate an unpause protection
-	function triggerAutoPause()
+	// Signal to the world_state, that it should pause the game when it has time to do so
+	// We can't pause the game immediately as this causes weird random ui glitches and crashes
+	// I was not able to fully understand it but I assume that some important processes in the update loop don't finish correctly if the game is paused in between them
+	function queueAutoPause()
 	{
+		this.m.HasPendingAutoPause = true;
+	}
+
+	// This is called from world_state::onUpdate()
+	function hasPendingAutoPause()
+	{
+		return this.m.HasPendingAutoPause;
+	}
+
+	// Execute everything that should happen, when our mod pauses the game in response to an event
+	// This is called from world_state::onUpdate()
+	function executeAutoPause()
+	{
+		this.m.HasPendingAutoPause = false;
 		this.m.LastPauseTriggered = ::Time.getRealTimeF();
 		::World.State.setPause(true);
 		::World.TopbarDayTimeModule.TS_shakePauseButton();
