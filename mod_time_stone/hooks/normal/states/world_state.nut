@@ -30,19 +30,19 @@
 
 	q.setNormalTime = @(__original) { function setNormalTime( _force = false )
 	{
-		// Feat: We now always force this time trough to allow the player to adjust time during camping or escorting
+		// Feat: We now always force this time through to allow the player to adjust time during camping or escorting
 		__original(true);
 	}}.setNormalTime;
 
 	q.setFastTime = @(__original) { function setFastTime( _force = false )
 	{
-		// Feat: We now always force this time trough to allow the player to adjust time during camping or escorting
+		// Feat: We now always force this time through to allow the player to adjust time during camping or escorting
 		__original(true);
 	}}.setFastTime;
 
 	q.setVeryFastTime = @(__original) { function setVeryFastTime( _force = false )
 	{
-		// Feat: We now always force this time trough to allow the player to adjust time during camping or escorting
+		// Feat: We now always force this time through to allow the player to adjust time during camping or escorting
 		__original(true);
 	}}.setVeryFastTime;
 
@@ -90,8 +90,6 @@
 
 		__original();
 	}}.updateTopBarButtonState;
-
-// New Functions
 
 // New Functions
 	// Play the sound effect for discovering a unique location on the world map

@@ -2,7 +2,7 @@
 	Event = {
 		CaravanNearbyTownAccessible = "Event.CaravanNearbyTownAccessible",
 		DiscoverHostileParty = "Event.DiscoverHostileParty",
-		DiscoverAlliesParty = "Event.DiscoverAlliesParty",
+		DiscoverAlliedParty = "Event.DiscoverAlliedParty",
 		DiscoverHostileAttackableLocation = "Event.DiscoverHostileAttackableLocation",
 		DiscoverUniqueLocation = "Event.DiscoverUniqueLocation",
 		LeaveEventScreen = "Event.LeaveEventScreen",	// The event screen is used for both events and contracts
@@ -42,7 +42,7 @@
 				}
 				break;
 			}
-			case ::TimeStone.Const.Event.DiscoverAlliesParty:
+			case ::TimeStone.Const.Event.DiscoverAlliedParty:
 			{
 				break;
 			}
