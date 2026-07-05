@@ -1,0 +1,8 @@
+### Description ###
+
+Time Stone is a quality of life mod that combines the state-of-the-art features of auto-pause and speed-up mods into one
+
+### Changes: ###
+
+0.1.0
+	- initial release on github
