@@ -6,6 +6,8 @@
 
 	q.onUpdate = @(__original) { function onUpdate()
 	{
+		__original();
+
 		if (::World.State.getPlayer().isAbleToSee(this))
 		{
 			if (this.m.TS_WasHidden && this.isAttackable() && ::Time.getVirtualTimeF() > this.m.TS_LastSeenByPlayer + ::TimeStone.Mod.ModSettings.getSetting("ForgetPartiesAfterXHours").getValue())
@@ -27,7 +29,5 @@
 			if (!this.m.TS_WasHidden) this.m.TS_LastSeenByPlayer = ::Time.getVirtualTimeF();
 			this.m.TS_WasHidden = true;
 		}
-
-		__original();
 	}}.onUpdate;
 });
