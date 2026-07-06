@@ -4,5 +4,8 @@ Time Stone is a quality of life mod that combines the state-of-the-art features 
 
 ### Changes: ###
 
+0.1.1
+	- Fix random crashes when auto pauses from discovering enemies trigger
+
 0.1.0
 	- initial release on github
