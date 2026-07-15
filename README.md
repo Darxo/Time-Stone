@@ -48,11 +48,11 @@ Time Stone is a quality of life mod that combines and improves the features exis
 
 ### Missing Features
 
-- Pause on Arrival (**Swifter**, **Mount n Blade Pause**)
-- Unpause when choosing new destination (**Swifter**, **Mount n Blade Pause**)
-- Pause on sunrise while camping (**Swifter**)
-- Pause on nightfall while camping (**Swifter**)
-- Pause on Escort over city (**Swifter**)
+- Pause on Arrival (**Configurable Pause**, **Mount n Blade Pause**)
+- Unpause when choosing new destination (**Configurable Pause**, **Mount n Blade Pause**)
+- Pause on sunrise while camping (**Configurable Pause**)
+- Pause on nightfall while camping (**Configurable Pause**)
+- Pause on Escort over city (**Configurable Pause**)
 - 4th World Speed State (**Swifter**)
 
 ### General
