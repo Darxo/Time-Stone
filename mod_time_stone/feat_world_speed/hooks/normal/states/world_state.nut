@@ -33,7 +33,7 @@
 
 	q.updateTopBarButtonState = @(__original) { function updateTopBarButtonState()
 	{
-		if (!::MSU.isNull(::World.TopbarDayTimeModule) && ::TimeStone.Mod.ModSettings.getSetting("NeverDisableSpeedButtons").getValue())
+		if (!::MSU.isNull(::World.TopbarDayTimeModule))
 		{
 			// We make sure all time buttons are enabled
 			::World.TopbarDayTimeModule.enableNormalTimeButton(true);
