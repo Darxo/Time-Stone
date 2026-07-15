@@ -2,7 +2,7 @@
 	local worldAutoPausePage = ::TimeStone.Mod.ModSettings.addPage("Auto Pause");
 
 	{	// Auto Pause Events
-		worldAutoPausePage.addTitle("WorldAutoPauseTitleEvents", "Events");
+		worldAutoPausePage.addTitle("WorldAutoPauseTitleEvents", "Events", "Any Event that is turned on, will pause the game when triggered on the world map.");
 
 		worldAutoPausePage.addBooleanSetting("AutoPause.DiscoverHostileParty", true, "Discover Hostile Party", "Pause the game whenever you discover a hostile party");
 		worldAutoPausePage.addBooleanSetting("AutoPause.DiscoverHostileAttackableLocation", false, "Discover Hostile Camp", "Pause the game whenever you discover an attackable hostile location");
