@@ -7,7 +7,10 @@
 }
 
 ::TimeStone.HooksMod <- ::Hooks.register(::TimeStone.ID, ::TimeStone.Version, ::TimeStone.Name);
-::TimeStone.HooksMod.require(["mod_msu"]);
+::TimeStone.HooksMod.require([
+	"vanilla >= 1.5.2-2",
+	"mod_msu",
+]);
 
 ::TimeStone.HooksMod.queue(">mod_msu", function() {
 	::TimeStone.Mod <- ::MSU.Class.Mod(::TimeStone.ID, ::TimeStone.Version, ::TimeStone.Name);
