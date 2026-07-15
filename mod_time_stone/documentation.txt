@@ -4,6 +4,13 @@ Time Stone is a quality of life mod that combines the state-of-the-art features 
 
 ### Changes: ###
 
+0.2.0
+	- Add two customizable hotkeyable tactical speed states (F2 and F3)
+	- Add new Auto-Pause Event for Sunrise near Allied Settlement
+	- Improve Mod Setting structure
+	- Display distance for Sunrise/Nightfall Auto-Pause Events
+	- Remove `NeverDisableSpeedButtons` setting
+
 0.1.1
 	- Fix random crashes when auto pauses from discovering enemies trigger
 
