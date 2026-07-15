@@ -14,6 +14,10 @@
 
 		worldAutoPausePage.addDivider("MiscDivider2");
 
+		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseAlliedSettlement", false, "Sunrise Near Allied Settlement", "Pause the game whenever it becomes day while there is an allied settlement within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
+
+		worldAutoPausePage.addDivider("MiscDivider3");
+
 		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseHostileParty", false, "Sunrise Near Hostile Party", "Pause the game whenever it becomes day while there is a hostile party within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
 		worldAutoPausePage.addBooleanSetting("AutoPause.NightfallHostileParty", false, "Nightfall Near Hostile Party", "Pause the game whenever it becomes day while there is a hostile party within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
 		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseAttackableLocation", false, "Sunrise Near Attackable Location", "Pause the game whenever it becomes day while there is an attackable location within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");

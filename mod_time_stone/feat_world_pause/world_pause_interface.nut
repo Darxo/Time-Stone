@@ -84,6 +84,10 @@
 						{
 							this.queueAutoPause();
 						}
+						else if (nearbyEntity.isAlliedWithPlayer() && ::MSU.isKindOf(nearbyEntity, "settlement") && ::TimeStone.Mod.ModSettings.getSetting("AutoPause.SunriseAlliedSettlement").getValue())
+						{
+							this.queueAutoPause();
+						}
 					}
 					else
 					{
