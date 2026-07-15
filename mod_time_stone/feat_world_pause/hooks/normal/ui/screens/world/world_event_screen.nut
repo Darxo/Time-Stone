@@ -3,6 +3,6 @@
 	{
 		__original(_withSlideAnimation);
 
-		::TimeStone.Interface.triggerEvent(::TimeStone.Const.Event.LeaveEventScreen);
+		::TimeStone.WorldPause.triggerEvent(::TimeStone.Const.Event.LeaveEventScreen);
 	}}.hide;
 });

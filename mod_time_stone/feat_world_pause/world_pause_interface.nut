@@ -1,4 +1,4 @@
-::TimeStone.Const <- {
+::MSU.Table.merge(::TimeStone.Const, {
 	Event = {
 		CaravanNearbyTownAccessible = "Event.CaravanNearbyTownAccessible",
 		DiscoverHostileParty = "Event.DiscoverHostileParty",
@@ -9,9 +9,9 @@
 		Nightfall = "Event.Nightfall",
 		Sunrise = "Event.Sunrise",
 	},
-};
+});
 
-::TimeStone.Interface <- {
+::TimeStone.WorldPause <- {
 	m = {
 	// Private
 		LastPauseTriggered = 0,		// time stamp in seconds when one of our events has last paused the game
@@ -20,8 +20,6 @@
 
 	function triggerEvent( _event )
 	{
-		// ::logWarning("TimeStone: triggerEvent " + _event);
-
 		if (!this.__isValidEntry(_event, ::TimeStone.Const.Event))
 		{
 			::logWarning("TimeStone: unknown _event " + _event);

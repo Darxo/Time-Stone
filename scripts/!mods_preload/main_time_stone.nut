@@ -3,6 +3,7 @@
 	Name = "Time Stone",
 	Version = "0.1.1",
 	GitHubURL = "https://github.com/Darxo/Time-Stone",
+	Const = {},
 }
 
 ::TimeStone.HooksMod <- ::Hooks.register(::TimeStone.ID, ::TimeStone.Version, ::TimeStone.Name);

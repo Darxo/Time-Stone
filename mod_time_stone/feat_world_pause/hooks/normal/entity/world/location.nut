@@ -7,12 +7,12 @@
 	{
 		if (this.isLocationType(::Const.World.LocationType.Unique))
 		{
-			::TimeStone.Interface.triggerEvent(::TimeStone.Const.Event.DiscoverUniqueLocation);
+			::TimeStone.WorldPause.triggerEvent(::TimeStone.Const.Event.DiscoverUniqueLocation);
 		}
 
 		if (this.isAttackable() && !this.isAlliedWithPlayer())
 		{
-			::TimeStone.Interface.triggerEvent(::TimeStone.Const.Event.DiscoverHostileAttackableLocation);
+			::TimeStone.WorldPause.triggerEvent(::TimeStone.Const.Event.DiscoverHostileAttackableLocation);
 		}
 
 		__original();

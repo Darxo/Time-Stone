@@ -14,11 +14,11 @@
 			{
 				if (this.isAlliedWithPlayer())
 				{
-					::TimeStone.Interface.triggerEvent(::TimeStone.Const.Event.DiscoverAlliedParty);
+					::TimeStone.WorldPause.triggerEvent(::TimeStone.Const.Event.DiscoverAlliedParty);
 				}
 				else
 				{
-					::TimeStone.Interface.triggerEvent(::TimeStone.Const.Event.DiscoverHostileParty);
+					::TimeStone.WorldPause.triggerEvent(::TimeStone.Const.Event.DiscoverHostileParty);
 				}
 			}
 

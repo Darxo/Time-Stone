@@ -11,7 +11,7 @@
 		{
 			if (this.m.TS_CanBecomeSunrise && ::World.getTime().Days > this.m.TS_LastSunrise)
 			{
-				::TimeStone.Interface.triggerEvent(::TimeStone.Const.Event.Sunrise);
+				::TimeStone.WorldPause.triggerEvent(::TimeStone.Const.Event.Sunrise);
 				this.m.TS_LastSunrise = ::World.getTime().Days;		// Sunrise can only trigger once per day
 			}
 			this.m.TS_CanBecomeSunrise = false;
@@ -21,7 +21,7 @@
 		{
 			if (this.m.TS_CanBecomeNightfall && ::World.getTime().Days > this.m.TS_LastNightfall)
 			{
-				::TimeStone.Interface.triggerEvent(::TimeStone.Const.Event.Nightfall);
+				::TimeStone.WorldPause.triggerEvent(::TimeStone.Const.Event.Nightfall);
 				this.m.TS_LastNightfall = ::World.getTime().Days;		// Nightfall can only trigger once per day
 			}
 			this.m.TS_CanBecomeSunrise = true;		// Sunrise can only happen after it has been night at least once
