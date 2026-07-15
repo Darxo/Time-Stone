@@ -14,10 +14,10 @@
 
 		worldAutoPausePage.addDivider("MiscDivider2");
 
-		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseHostileParty", false, "Sunrise Near Hostile Party", "Pause the game whenever it becomes day while there is a hostile party nearby");
-		worldAutoPausePage.addBooleanSetting("AutoPause.NightfallHostileParty", false, "Nightfall Near Hostile Party", "Pause the game whenever it becomes day while there is a hostile party nearby");
-		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseAttackableLocation", false, "Sunrise Near Attackable Location", "Pause the game whenever it becomes day while there is an attackable location nearby");
-		worldAutoPausePage.addBooleanSetting("AutoPause.NightfallAttackableLocation", false, "Nightfall Near Attackable Location", "Pause the game whenever it becomes night while there is an attackable location nearby");
+		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseHostileParty", false, "Sunrise Near Hostile Party", "Pause the game whenever it becomes day while there is a hostile party within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
+		worldAutoPausePage.addBooleanSetting("AutoPause.NightfallHostileParty", false, "Nightfall Near Hostile Party", "Pause the game whenever it becomes day while there is a hostile party within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
+		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseAttackableLocation", false, "Sunrise Near Attackable Location", "Pause the game whenever it becomes day while there is an attackable location within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
+		worldAutoPausePage.addBooleanSetting("AutoPause.NightfallAttackableLocation", false, "Nightfall Near Attackable Location", "Pause the game whenever it becomes night while there is an attackable location within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
 	}
 
 	worldAutoPausePage.addTitle("WorldAutoPauseTitleMisc", "Misc");
