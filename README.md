@@ -7,6 +7,7 @@ Time Stone is a quality of life mod that combines and improves the features exis
 ## World Speed
 
 - Make all three Vanilla speed states configurable
+- Change **Very Fast** speed to x4 by default (up from x3)
 - Allow adjusting of speed during escort missions
 - Allow adjusting of speed during camping
 
@@ -29,7 +30,7 @@ Time Stone is a quality of life mod that combines and improves the features exis
 
 ## Tactical Speed
 
-- Add settings to configure two tactical speed settings
+- Add settings to configure two tactical speed states
 - Add two customizable keybinds to swap between the two tactical speed settings (F2 and F3)
 
 # Why this mod over other similar mods?
@@ -38,10 +39,9 @@ Time Stone is a quality of life mod that combines and improves the features exis
 
 - 2-in-1: You only need to install one mod, instead of speed and pause mods
 - Configurable Vanilla World Speed
+- 2 Tactical Speed settings you can configure and switch between via hotkeys
 - More Auto-Pause Events (than **Configurable Pause**)
 - Discover sound for unique location
-- Configurable World Speed
-- 2 Tactical Speed settings you can configure and switch between via hotkeys
 - Small pause-button animation when Auto-Pause triggers
 
 ## Downsides of this mod
@@ -59,7 +59,7 @@ Time Stone is a quality of life mod that combines and improves the features exis
 
 - Requires **MSU** and **Modern Hooks** which makes it a bit more fragile should those mods break
 - This mod is more likely to break from a Vanilla update, because of its size, compared to a simple speed-up mod like **Quicker**
-- Just like **Swifter** and **Quicker**, this mod speeds up combat speed by changing the virtual clock. This approach is known to rarely cause glitches or crashes in combat
+- Just like **Swifter** and **Quicker**, this mod speeds up combat speed by changing the virtual clock. This approach is known to, in rare cases, cause glitches or crashes in combat
 
 # Compatibility
 
