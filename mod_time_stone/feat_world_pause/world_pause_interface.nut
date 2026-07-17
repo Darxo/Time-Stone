@@ -68,7 +68,7 @@
 			}
 			case ::TimeStone.Const.Event.LeaveEventScreen:
 			{
-				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.NightfallAttackableLocation").getValue())
+				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.LeaveEventScreen").getValue())
 				{
 					this.queueAutoPause();
 				}
