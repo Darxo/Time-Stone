@@ -4,6 +4,9 @@ Time Stone is a quality of life mod that combines the state-of-the-art features 
 
 ### Changes: ###
 
+0.2.2
+	- Fix world speed buttons not changing correctly when using legends mod
+
 0.2.1
 	- Slightly improve structure of world speed settings page
 	- Fix leaving event screen not triggering auto pause correctly

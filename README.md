@@ -64,3 +64,5 @@ Time Stone is a quality of life mod that combines and improves the features exis
 # Compatibility
 
 - Is safe to remove from- and add to any existing savegames
+- Compatible with Legends
+- Compatible with Reforged
