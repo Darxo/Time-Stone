@@ -40,6 +40,13 @@
 			::World.TopbarDayTimeModule.enableFastTimeButton(true);
 			::World.TopbarDayTimeModule.enableVeryFastTimeButton(true);
 
+			if (::Hooks.hasMod("mod_legends"))
+			{
+				// Legends uses a weird system, where they try to auto-detect speed states using hard-coded speed-values
+				// Our mod manages the current speed-state in its own way, so we prefer the vanilla way of passing state values directly
+				::World.TopbarDayTimeModule.m.IsAutoUpdateTimeButtonState = false;
+			}
+
 			// Then we replicate the vanilla code for
 			if (this.isPaused())
 			{

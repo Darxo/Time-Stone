@@ -12,7 +12,7 @@
 	"mod_msu",
 ]);
 
-::TimeStone.HooksMod.queue(">mod_msu", function() {
+::TimeStone.HooksMod.queue([">mod_msu", ">mod_legends"], function() {
 	::TimeStone.Mod <- ::MSU.Class.Mod(::TimeStone.ID, ::TimeStone.Version, ::TimeStone.Name);
 
 	::TimeStone.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.GitHub, ::TimeStone.GitHubURL);
