@@ -5,7 +5,7 @@
 		DiscoverAlliedParty = "Event.DiscoverAlliedParty",
 		DiscoverHostileAttackableLocation = "Event.DiscoverHostileAttackableLocation",
 		DiscoverUniqueLocation = "Event.DiscoverUniqueLocation",
-		LeaveEventScreen = "Event.LeaveEventScreen",	// The event screen is used for both events and contracts
+		LeaveUIScreen = "Event.LeaveUIScreen",		// Includes anything that uses the menu_stack
 		Nightfall = "Event.Nightfall",
 		Sunrise = "Event.Sunrise",
 	},
@@ -66,7 +66,7 @@
 				}
 				break;
 			}
-			case ::TimeStone.Const.Event.LeaveEventScreen:
+			case ::TimeStone.Const.Event.LeaveUIScreen:
 			{
 				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.LeaveEventScreen").getValue())
 				{

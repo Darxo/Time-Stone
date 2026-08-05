@@ -19,7 +19,7 @@
 
 		worldAutoPausePage.addBooleanSetting("AutoPause.SunriseAlliedSettlement", false, "Sunrise Near Allied Settlement", "Pause the game whenever it becomes day while there is an allied settlement within combat distance (" + ::Const.World.CombatSettings.CombatPlayerDistance + " units)");
 
-		worldAutoPausePage.addBooleanSetting("AutoPause.LeaveEventScreen", true, "Leave Event/Contract Screen", "Pause the game whenever you close either the event screen or the contract screen");
+		worldAutoPausePage.addBooleanSetting("AutoPause.LeaveEventScreen", true, "Leave any UI Screen", "Pause the game whenever you close the last UI screen in a chain, causing you to return to the world screen.\n\nTypical UI Screens are Contract Screen, Event Screen and Combat Dialog");
 	}
 
 	worldAutoPausePage.addTitle("WorldAutoPauseTitleMisc", "Misc");
