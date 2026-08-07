@@ -4,6 +4,9 @@ Time Stone is a quality of life mod that combines the state-of-the-art features 
 
 ### Changes: ###
 
+0.2.3
+	- Rename setting **Leave Event/Contract Screen** into **Leave any UI Screen**. It now pauses the game when you return from any UI window to the world map (including combat dialog)
+
 0.2.2
 	- Fix world speed buttons not changing correctly when using legends mod
 

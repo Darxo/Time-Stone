@@ -22,7 +22,7 @@ Time Stone is a quality of life mod that combines and improves the features exis
 	- Sunrise Near Attackable Location (off)
 	- Nightfall Near Attackable Location (off)
 	- Sunrise Near Allied Settlement (off)
-	- Leave Event/Contract Screen (on)
+	- Leave UI Screen (on)
 - Add configurable Unpause-Protection that prevents accidental unpauses after an Auto-Pause triggered (500ms)
 - Forget world parties after not seeing them for a configurable amount of ingame hours (2 hours), allowing Auto-Pause to trigger again on them
 - Add setting to trigger the discover sound for hostile parties when you meet them again (on)
