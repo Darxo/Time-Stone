@@ -71,7 +71,9 @@
 			{
 				if (::TimeStone.Mod.ModSettings.getSetting("AutoPause.LeaveEventScreen").getValue())
 				{
-					this.queueAutoPause();
+					// We don't trigger an autopause here because we don't require unpause protection in this scenario
+					// A long unpause protection time would only irritate a player who wants to quickly unpause and move on
+					this.queuePause();
 				}
 				break;
 			}
