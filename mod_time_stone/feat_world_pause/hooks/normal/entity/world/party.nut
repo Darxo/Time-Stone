@@ -2,7 +2,7 @@
 // Private
 	// We don't serialize this, because we assume that after loading a game, the player has forgotton all discovered enemies already
 	q.m.TS_LastSeenByPlayer <- 0;	// ::Time.getVirtualTimeF() at which the player has last seen this unit
-	q.m.TS_WasHidden <- false;		// Was this party hidden to the player in the last frame?
+	q.m.TS_WasHidden <- true;		// Was this party hidden to the player in the last frame?
 
 	q.onUpdate = @(__original) { function onUpdate()
 	{
