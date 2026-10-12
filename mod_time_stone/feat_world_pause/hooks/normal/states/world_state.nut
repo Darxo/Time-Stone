@@ -22,6 +22,11 @@
 
 	q.onUpdate = @(__original) { function onUpdate()
 	{
+		if (::TimeStone.WorldPause.hasPendingPause())
+		{
+			::TimeStone.WorldPause.executePause();
+		}
+
 		if (::TimeStone.WorldPause.hasPendingAutoPause())
 		{
 			::TimeStone.WorldPause.executeAutoPause();

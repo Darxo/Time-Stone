@@ -16,6 +16,7 @@
 	// Private
 		LastPauseTriggered = 0,		// time stamp in seconds when one of our events has last paused the game
 		HasPendingAutoPause = false,
+		HasPendingPause = false,
 	},
 
 	function triggerEvent( _event )
@@ -135,6 +136,14 @@
 		this.m.HasPendingAutoPause = true;
 	}
 
+	// Signal to the world_state, that it should pause the game when it has time to do so
+	// We can't pause the game immediately as this causes weird random ui glitches and crashes
+	// I was not able to fully understand it but I assume that some important processes in the update loop don't finish correctly if the game is paused in between them
+	function queuePause()
+	{
+		this.m.HasPendingPause = true;
+	}
+
 	// This is called from world_state::onUpdate()
 	function hasPendingAutoPause()
 	{
@@ -149,6 +158,19 @@
 		this.m.LastPauseTriggered = ::Time.getRealTimeF();
 		::World.State.setPause(true);
 		::World.TopbarDayTimeModule.TS_shakePauseButton();
+	}
+
+	// This is called from world_state::onUpdate()
+	function hasPendingPause()
+	{
+		return this.m.HasPendingPause;
+	}
+
+	// This is called from world_state::onUpdate()
+	function executePause()
+	{
+		this.m.HasPendingPause = false;
+		::World.State.setPause(true);
 	}
 
 	function isUnpauseProtected()
