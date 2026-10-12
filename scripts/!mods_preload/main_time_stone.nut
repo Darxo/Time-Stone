@@ -1,7 +1,7 @@
 ::TimeStone <- {
 	ID = "mod_time_stone",
 	Name = "Time Stone",
-	Version = "0.2.3",
+	Version = "0.2.4",
 	GitHubURL = "https://github.com/Darxo/Time-Stone",
 	Const = {},
 }

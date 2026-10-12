@@ -4,6 +4,10 @@ Time Stone is a quality of life mod that combines the state-of-the-art features 
 
 ### Changes: ###
 
+0.2.4
+	- Disable unpause protection after closing a UI screen
+	- Fix enemies spawning in player vision not triggering an autopause
+
 0.2.3
 	- Rename setting **Leave Event/Contract Screen** into **Leave any UI Screen**. It now pauses the game when you return from any UI window to the world map (including combat dialog)
 
